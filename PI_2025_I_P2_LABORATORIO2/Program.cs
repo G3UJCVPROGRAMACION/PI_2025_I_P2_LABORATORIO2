@@ -22,6 +22,8 @@ namespace PI_2025_I_P2_LABORATORIO2
             {
                 try
                 {
+                    WriteLine("Bienvenido a la Biblioteca Virtual");
+                    WriteLine("Menú de opciones");
                     WriteLine("1. Agregar Libro");
                     WriteLine("2. Buscar Libro");
                     WriteLine("3. Listar Libros");
