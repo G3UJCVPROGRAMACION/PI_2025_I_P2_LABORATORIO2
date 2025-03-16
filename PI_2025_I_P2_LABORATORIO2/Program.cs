@@ -67,7 +67,7 @@ namespace PI_2025_I_P2_LABORATORIO2
                     return resultado;
                 }
                 WriteLine(mensajeError);
-            }
+            }//Final del método ValidarEntero
         }
     }
 
