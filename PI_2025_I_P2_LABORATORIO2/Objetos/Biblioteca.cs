@@ -70,7 +70,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
 
             public override void MostrarInformacion()
             {
-                WriteLine($"Título: {Titulo}, Autor: {Autor}, Año: {AnioPublicacion}, ISBN: {ISBN}, Editorial: {Editorial}, Páginas: {Paginas}, Género: {Genero}, SubGénero: {SubGenero}, Disponibles: {CantidadDisponible}");
+                WriteLine($"Título: {Titulo}, Autor: {Autor}, Año: {AnioPublicacion}, ISBN: {ISBN}, Editorial: {Editorial}, Páginas: {Paginas}, Género: {Genero}, SubGénero: {SubGenero}, Ejemplares Disponibles: {CantidadDisponible}");
             }
         }
 
@@ -87,7 +87,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
 
             public override void MostrarInformacion()
             {
-                WriteLine($"Título: {Titulo}, Autor: {Autor}, Año: {AnioPublicacion}, ISBN: {ISBN}, Editorial: {Editorial}, Páginas: {Paginas}, Género: {Genero}, Tema: {Tema}, Disponibles: {CantidadDisponible}");
+                WriteLine($"Título: {Titulo}, Autor: {Autor}, Año: {AnioPublicacion}, ISBN: {ISBN}, Editorial: {Editorial}, Páginas: {Paginas}, Género: {Genero}, Tema: {Tema}, Ejemplares Disponibles: {CantidadDisponible}");
             }
         }
 
