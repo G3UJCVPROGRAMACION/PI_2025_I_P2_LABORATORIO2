@@ -117,7 +117,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                     WriteLine("Ingrese el año de publicación:");
                     int anio = ValidarEntero("El año de publicación no es válido.", 1000, DateTime.Now.Year);
 
-                    WriteLine("Ingrese el ISBN (formato: 978-3-16-148410-0):");
+                    WriteLine("Ingrese el ISBN (formato: 000-0-00-000000-0):");
                     string isbn = ValidarISBN("El ISBN no tiene un formato válido.");
 
                     // Validar que el ISBN no esté repetido
@@ -133,11 +133,11 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                     WriteLine("Ingrese el número de páginas:");
                     int paginas = ValidarEntero("El número de páginas no es válido.", 1, 10000);
 
-                    WriteLine("Ingrese el género (máximo 30 caracteres):");
-                    string genero = ValidarCadenaNoVacia("El género no puede estar vacío.", 30);
-
                     WriteLine("Ingrese la cantidad de ejemplares disponibles:");
                     int cantidadDisponible = ValidarEntero("La cantidad de ejemplares no es válida.", 1, 1000);
+
+                    WriteLine("Ingrese el género (máximo 30 caracteres):");
+                    string genero = ValidarCadenaNoVacia("El género no puede estar vacío.", 30);
 
                     if (tipo == 1)
                     {
