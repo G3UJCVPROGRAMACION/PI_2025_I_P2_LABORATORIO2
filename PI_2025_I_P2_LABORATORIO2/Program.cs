@@ -22,7 +22,7 @@ namespace PI_2025_I_P2_LABORATORIO2
             {
                 try
                 {
-                    WriteLine("Bienvenido a la Biblioteca Virtual");
+                    WriteLine("Bienvenido al inventario de la Biblioteca UJCV");
                     WriteLine("Menú de opciones");
                     WriteLine("1. Agregar Libro");
                     WriteLine("2. Buscar Libro");
