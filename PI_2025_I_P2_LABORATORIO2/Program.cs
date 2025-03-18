@@ -13,7 +13,7 @@ namespace PI_2025_I_P2_LABORATORIO2
         {
             List<Libro> libros = new List<Libro>();
 
-            // Crear instancias de las operaciones
+            
             IAgregarLibro agregarLibro = new AgregarLibro(libros);
             IBuscarLibro buscarLibro = new BuscarLibro(libros);
             IListarLibros listarLibros = new ListarLibros(libros);
@@ -34,15 +34,15 @@ namespace PI_2025_I_P2_LABORATORIO2
                     switch (opcion)
                     {
                         case 1:
-                            Clear(); // Limpiar la consola antes de agregar un libro
+                            Clear();
                             agregarLibro.Agregar();
                             break;
                         case 2:
-                            Clear(); // Limpiar la consola antes de buscar un libro
+                            Clear(); 
                             buscarLibro.BuscarPorTitulo();
                             break;
                         case 3:
-                            Clear(); // Limpiar la consola antes de listar los libros
+                            Clear(); 
                             listarLibros.Listar();
                             break;
                         case 4:
@@ -54,12 +54,12 @@ namespace PI_2025_I_P2_LABORATORIO2
                     WriteLine($"Error: {ex.Message}");
                     WriteLine("\nPresione cualquier tecla para continuar...");
                     ReadKey();
-                    Clear(); // Limpiar la consola en caso de error
+                    Clear(); 
                 }
             }
         }
 
-        // Método para validar enteros en el menú
+        
         private static int ValidarEntero(string mensajeError, int min, int max)
         {
             while (true)

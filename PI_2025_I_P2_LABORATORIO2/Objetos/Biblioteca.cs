@@ -9,28 +9,28 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
 {
     internal class Biblioteca
     {
-        // Interfaz para agregar libros
+        
         public interface IAgregarLibro
         {
             void Agregar();
         }
 
-        // Interfaz para buscar libros
+        
         public interface IBuscarLibro
         {
             void BuscarPorTitulo();
         }
 
-        // Interfaz para listar libros
+      
         public interface IListarLibros
         {
             void Listar();
         }
 
-        // Clase base abstracta que representa un libro
+        
         public abstract class Libro
         {
-            // Propiedades encapsuladas
+            
             public string Titulo { get; set; }
             public string Autor { get; set; }
             public int AnioPublicacion { get; set; }
@@ -40,7 +40,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
             public string Genero { get; set; }
             public int CantidadDisponible { get; set; } 
 
-            // Constructor
+            
             public Libro(string titulo, string autor, int anioPublicacion, string isbn, string editorial, int paginas, string genero, int cantidadDisponible)
             {
                 Titulo = titulo;
@@ -53,11 +53,11 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                 CantidadDisponible = cantidadDisponible;
             }
 
-            // Métodos abstractos
+            
             public abstract void MostrarInformacion();
         }
 
-        // Clase derivada para libros de ficción
+        
         public class LibroFiccion : Libro
         {
             public string SubGenero { get; set; }
@@ -74,7 +74,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
             }
         }
 
-        // Clase derivada para libros de no ficción
+        
         public class LibroNoFiccion : Libro
         {
             public string Tema { get; set; }
@@ -91,7 +91,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
             }
         }
 
-        // Clase para agregar libros
+        
         public class AgregarLibro : IAgregarLibro
         {
             private List<Libro> libros;
@@ -120,11 +120,11 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                     WriteLine("Ingrese el ISBN (formato: 000-0-00-000000-0):");
                     string isbn = ValidarISBN("El ISBN no tiene un formato válido.");
 
-                    // Validar que el ISBN no esté repetido
+                    
                     if (ExisteISBN(isbn))
                     {
                         WriteLine("Error: El ISBN ya está registrado para otro libro.");
-                        return; // Detener la operación si el ISBN está repetido
+                        return; 
                     }
 
                     WriteLine("Ingrese la editorial (máximo 50 caracteres):");
@@ -162,11 +162,11 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                 {
                     WriteLine("\nPresione cualquier tecla para continuar...");
                     ReadKey();
-                    Clear(); // Limpiar la consola después de agregar un libro
+                    Clear(); 
                 }
             }
 
-            // Método para validar enteros
+            
             private int ValidarEntero(string mensajeError, int min, int max)
             {
                 while (true)
@@ -179,7 +179,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                 }
             }
 
-            // Método para validar cadenas no vacías con límite máximo de caracteres
+            
             private string ValidarCadenaNoVacia(string mensajeError, int maxCaracteres)
             {
                 while (true)
@@ -197,7 +197,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                 }
             }
 
-            // Método para validar ISBN
+            
             private string ValidarISBN(string mensajeError)
             {
                 while (true)
@@ -211,14 +211,14 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                 }
             }
 
-            // Método para verificar si el ISBN ya existe
+            
             private bool ExisteISBN(string isbn)
             {
                 return libros.Exists(libro => libro.ISBN.Equals(isbn, StringComparison.OrdinalIgnoreCase));
             }
         }
 
-        // Clase para buscar libros
+        
         public class BuscarLibro : IBuscarLibro
         {
             private List<Libro> libros;
@@ -253,11 +253,11 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
                 {
                     WriteLine("\nPresione cualquier tecla para continuar...");
                     ReadKey();
-                    Clear(); // Limpiar la consola después de buscar un libro
+                    Clear(); 
                 }
             }
 
-            // Método para validar cadenas no vacías con límite máximo de caracteres
+            
             private string ValidarCadenaNoVacia(string mensajeError, int maxCaracteres)
             {
                 while (true)
@@ -276,7 +276,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
             }
         }
 
-        // Clase para listar libros
+        
         public class ListarLibros : IListarLibros
         {
             private List<Libro> libros;
@@ -302,7 +302,7 @@ namespace PI_2025_I_P2_LABORATORIO2.Objetos
 
                    WriteLine("\nPresione cualquier tecla para continuar...");
                 ReadKey();
-                Clear(); // Limpiar la consola después de listar los libros
+                Clear(); 
             }
         }
 
